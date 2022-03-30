@@ -1,0 +1,600 @@
+{
+  "f7-if": {
+    "description": "If",
+    "scope": "",
+    "prefix": "f7-js-if",
+    "body": ["if (variable === 0) {", "\tresult = false;", "}"]
+  },
+  "f7-if-else": {
+    "description": "If Else",
+    "scope": "",
+    "prefix": "f7-js-if-else",
+    "body": [
+      "if (variable === 0) {",
+      "\tresult = false;",
+      "} else {",
+      "\tresult = true;",
+      "}"
+    ]
+  },
+  "f7-if-else-if": {
+    "description": "",
+    "scope": "",
+    "prefix": "f7-js-if-else-if",
+    "body": [
+      "if (variable === 0) {",
+      "\tresult = false;",
+      "} else if (variable === 1){",
+      "\tresult = true;",
+      "}"
+    ]
+  },
+  "f7-page-init": {
+    "description": "",
+    "scope": "",
+    "prefix": "f7-page-init",
+    "body": [
+      "$$(document).on('page:init', '.page[data-name=\"${page_name}\"]', function(callback) {",
+      "\tconsole.log(callback.detail.route.params);",
+      "});"
+    ]
+  },
+  "f7-page-reinit": {
+    "description": "",
+    "scope": "",
+    "prefix": "f7-page-reinit",
+    "body": [
+      "$$(document).on('page:reinit', '.page[data-name=\"${page_name}\"]', function(callback) {",
+      "\tconsole.log(callback.detail.route.params);",
+      "});"
+    ]
+  },
+  "f7-page-beforein": {
+    "description": "",
+    "scope": "",
+    "prefix": "f7-page-beforein",
+    "body": [
+      "$$(document).on('page:beforein', '.page[data-name=\"${page_name}\"]', function(callback) {",
+      "\tconsole.log(callback.detail.route.params);",
+      "});"
+    ]
+  },
+  "f7-page-afterin": {
+    "description": "",
+    "scope": "",
+    "prefix": "f7-page-afterin",
+    "body": [
+      "$$(document).on('page:afterin', '.page[data-name=\"${page_name}\"]', function(callback) {",
+      "\tconsole.log(callback.detail.route.params);",
+      "});"
+    ]
+  },
+  "f7-page-beforeout": {
+    "description": "",
+    "scope": "",
+    "prefix": "f7-page-beforeout",
+    "body": [
+      "$$(document).on('page:beforeout', '.page[data-name=\"${page_name}\"]', function(callback) {",
+      "\tconsole.log(callback.detail.route.params);",
+      "});"
+    ]
+  },
+  "f7-page-out": {
+    "description": "",
+    "scope": "",
+    "prefix": "f7-page-out",
+    "body": [
+      "$$(document).on('page:afterout', '.page[data-name=\"your_page_name\"]', function(callback) {",
+      "\tconsole.log(callback.detail.route.params);",
+      "});"
+    ]
+  },
+  "f7-page-afterin-preloader": {
+    "description": "",
+    "scope": "",
+    "prefix": "f7-page-afterin-preloader",
+    "body": [
+      "$$(document).on('page:afterin', '.page[data-name=\"${page_name}\"]', function (callback) {",
+      "\tconsole.log(callback.detail.route.params);",
+      "\tapp.preloader.show();",
+      "\tsetTimeout(function () {//Wait for 5 Sec",
+      "\t\tapp.preloader.hide();",
+      "\t}, 5000);",
+      "});"
+    ]
+  },
+  "f7-page-afterin-progress": {
+    "description": "",
+    "scope": "",
+    "prefix": "f7-page-afterin-progress",
+    "body": [
+      "$$(document).on('page:afterin', '.page[data-name=\"${page_name}\"]', function (callback) {",
+      "\tconsole.log(callback.detail.route.params);",
+      "\tapp.progressbar.show();",
+      "\tsetTimeout(function () {//Wait for 5 Sec",
+      "\t\tapp.progressbar.hide();",
+      "\t}, 5000);",
+      "});"
+    ]
+  },
+  "f7-page-afterin-progress-multi": {
+    "description": "",
+    "scope": "",
+    "prefix": "f7-page-afterin-progress-multi",
+    "body": [
+      "$$(document).on('page:afterin', '.page[data-name=\"your_page_name\"]', function (callback) {",
+      "\tconsole.log(callback.detail.route.params);",
+      "\tapp.progressbar.show('multi');",
+      "\tsetTimeout(function () {//Wait for 5 Sec",
+      "\t\tapp.progressbar.hide();",
+      "\t}, 5000);",
+      "});"
+    ]
+  },
+  "f7-page-afterin-dialog-preloader": {
+    "description": "",
+    "scope": "",
+    "prefix": "f7-page-afterin-dialog-preloader",
+    "body": [
+      "$$(document).on('page:afterin', '.page[data-name=\"your_page_name\"]', function (callback) {",
+      "\tconsole.log(callback.detail.route.params);",
+      "\tapp.dialog.preloader('Loading');",
+      "\tsetTimeout(function () {//Wait for 5 Sec",
+      "\t\tapp.dialog.close();",
+      "\t}, 5000);",
+      "});"
+    ]
+  },
+  "f7-page-afterin-dialog-progress": {
+    "description": "",
+    "scope": "",
+    "prefix": "f7-page-afterin-dialog-progress",
+    "body": [
+      "$$(document).on('page:afterin', '.page[data-name=\"your_page_name\"]', function (callback) {",
+      "\tconsole.log(callback.detail.route.params);",
+      "\tapp.dialog.progress('Loading');",
+      "\tsetTimeout(function () {//Wait for 5 Sec",
+      "\t\tapp.dialog.close();",
+      "\t}, 5000);",
+      "});"
+    ]
+  },
+  "f7-action-click": {
+    "description": "",
+    "scope": "",
+    "prefix": "f7-action-click",
+    "body": [
+      "$$(document).on('click', '#${id_or_class_name}', function () {",
+      "\tapp.dialog.alert('click');",
+      "});"
+    ]
+  },
+  "f7-action-keyup": {
+    "description": "",
+    "scope": "",
+    "prefix": "f7-action-keyup",
+    "body": [
+      "$$(document).on('keyup', '#${id_or_class_name}', function () {",
+      "\tapp.dialog.alert('keyup');",
+      "});"
+    ]
+  },
+  "f7-action-keydown": {
+    "description": "",
+    "scope": "",
+    "prefix": "f7-action-keydown",
+    "body": [
+      "$$(document).on('keydown', '#${id_or_class_name}', function () {",
+      "\tapp.dialog.alert('keydown');",
+      "});"
+    ]
+  },
+  "f7-notification-full": {
+    "description": "",
+    "scope": "",
+    "prefix": "f7-notification-full",
+    "body": [
+      "app.notification.create({",
+      "\ticon: '<i class=\"icon material-icons\">notifications</i>',",
+      "\ttitle: 'Pro7',",
+      "\ttitleRightText: 'now',",
+      "\tsubtitle: 'This is a subtitle',",
+      "\ttext: 'This is a simple notification message',",
+      "\tcloseTimeout: 3000,",
+      "\ton: {",
+      "\t\tclose: function () {",
+      "\t\t\tapp.dialog.alert('Notification closed');",
+      "\t\t},",
+      "\t},",
+      "}).open();"
+    ]
+  },
+  "f7-notifications-close-button": {
+    "description": "",
+    "scope": "",
+    "prefix": "f7-notifications-close-button",
+    "body": [
+      "app.notification.create({",
+      "\ticon: '<i class=\"icon material-icons\">notifications</i>',",
+      "\ttitle: 'Pro7',",
+      "\ttitleRightText: 'now',",
+      "\tsubtitle: 'This is a subtitle',",
+      "\ttext: 'This is a simple notification message',",
+      "\tcloseButton: true,",
+      "\ton: {",
+      "\t\tclose: function () {",
+      "\t\t\tapp.dialog.alert('Notification closed');",
+      "\t\t},",
+      "\t},",
+      "}).open()"
+    ]
+  },
+  "f7-notifications-click-close": {
+    "description": "",
+    "scope": "",
+    "prefix": "f7-notifications-click-close",
+    "body": [
+      "app.notification.create({",
+      "\ticon: '<i class=\"icon material-icons\">notifications</i>',",
+      "\ttitle: 'Pro7',",
+      "\ttitleRightText: 'now',",
+      "\tsubtitle: 'This is a subtitle',",
+      "\ttext: 'This is a simple notification message',",
+      "\tcloseOnClick: true,",
+      "\ton: {",
+      "\t\tclose: function () {",
+      "\t\t\tapp.dialog.alert('Notification closed');",
+      "\t\t},",
+      "\t},",
+      "}).open()"
+    ]
+  },
+  "f7-toast-top": {
+    "description": "",
+    "scope": "",
+    "prefix": "f7-toast-top",
+    "body": [
+      "app.toast.create({",
+      "\ttext: 'Toast',",
+      "\tposition: 'top',",
+      "\tcloseTimeout: 2000,",
+      "\ton: {",
+      "\t\tclose: function () {",
+      "\t\t\tapp.dialog.alert('Toast Closed');",
+      "\t\t},",
+      "\t}",
+      "}).open();"
+    ]
+  },
+  "f7-toast-bottom": {
+    "description": "",
+    "scope": "",
+    "prefix": "f7-toast-bottom",
+    "body": [
+      "app.toast.create({",
+      "\ttext: 'Toast',",
+      "\tcloseTimeout: 2000,",
+      "\ton: {",
+      "\t\tclose: function () {",
+      "\t\t\tapp.dialog.alert('Toast Closed');",
+      "\t\t},",
+      "\t}",
+      "}).open();"
+    ]
+  },
+  "f7-toast-center": {
+    "description": "",
+    "scope": "",
+    "prefix": "f7-toast-center",
+    "body": [
+      "app.toast.create({",
+      "\ttext: 'Toast',",
+      "\tposition: 'center',",
+      "\tcloseTimeout: 2000,",
+      "\ton: {",
+      "\t\tclose: function () {",
+      "\t\t\tapp.dialog.alert('Toast Closed');",
+      "\t\t},",
+      "\t}",
+      "}).open();"
+    ]
+  },
+  "f7-toast-center-icon": {
+    "description": "",
+    "scope": "",
+    "prefix": "f7-toast-center-icon",
+    "body": [
+      "app.toast.create({",
+      "\ttext: 'Toast',",
+      "\ticon: app.theme === 'ios' ? '<i class=\"material-icons\">notifications</i>' : '<i class=\"material-icons\">notifications_none</i>',",
+      "\tposition: 'center',",
+      "\tcloseTimeout: 2000,",
+      "\ton: {",
+      "\t\tclose: function () {",
+      "\t\t\tapp.dialog.alert('Toast Closed');",
+      "\t\t},",
+      "\t}",
+      "}).open();"
+    ]
+  },
+  "f7-toast-close-button": {
+    "description": "",
+    "scope": "",
+    "prefix": "f7-toast-close-button",
+    "body": [
+      "app.toast.create({",
+      "\ttext: 'Toast',",
+      "\tcloseButton: true,",
+      "\ton: {",
+      "\t\tclose: function () {",
+      "\t\t\tapp.dialog.alert('Toast Closed');",
+      "\t\t},",
+      "\t}",
+      "}).open();"
+    ]
+  },
+  "f7-toast-custom-close-button": {
+    "description": "",
+    "scope": "",
+    "prefix": "f7-toast-custom-close-button",
+    "body": [
+      "app.toast.create({",
+      "\ttext: 'Toast',",
+      "\tcloseButton: true,",
+      "\tcloseButtonText: 'Close Me',",
+      "\tcloseButtonColor: 'red',",
+      "\ton: {",
+      "\t\tclose: function () {",
+      "\t\t\tapp.dialog.alert('Toast Closed');",
+      "\t\t},",
+      "\t}",
+      "}).open();"
+    ]
+  },
+  "f7-dialog-alert": {
+    "description": "",
+    "scope": "",
+    "prefix": "f7-dialog-alert",
+    "body": ["app.dialog.alert('Description', 'Title');"]
+  },
+  "f7-dialog-confirmation": {
+    "description": "",
+    "scope": "",
+    "prefix": "f7-dialog-confirmation",
+    "body": [
+      "app.dialog.confirm('Are you feel good today?', function() {",
+      "\tapp.dialog.alert('Yes');",
+      "}, function() {",
+      "\tapp.dialog.alert('No');",
+      "});"
+    ]
+  },
+  "f7-dialog-prompt": {
+    "description": "",
+    "scope": "",
+    "prefix": "f7-dialog-prompt",
+    "body": [
+      "app.dialog.prompt('What is your name?', function(name) {",
+      "\tapp.dialog.alert('Ok, your name is ' + name);",
+      "});"
+    ]
+  },
+  "f7-dialog-horizontal": {
+    "description": "",
+    "scope": "",
+    "prefix": "f7-dialog-horizontal",
+    "body": [
+      "app.dialog.create({",
+      "\ttitle: 'Title',",
+      "\ttext: 'Information',",
+      "\tbuttons: [{",
+      "\t\t\ttext: 'Option',",
+      "\t\t\tonClick: function() {",
+      "\t\t\t\tapp.dialog.alert('Option');",
+      "\t\t\t}",
+      "\t\t},",
+      "\t\t{",
+      "\t\t\ttext: 'Cancel',",
+      "\t\t\tonClick: function() {",
+      "\t\t\t\tapp.dialog.alert('Cancel');",
+      "\t\t\t}",
+      "\t\t},",
+      "\t\t{",
+      "\t\t\ttext: 'Yes',",
+      "\t\t\tonClick: function() {",
+      "\t\t\t\tapp.dialog.alert('Yes');",
+      "\t\t\t}",
+      "\t\t},",
+      "\t]",
+      "}).open();"
+    ]
+  },
+  "f7-dialog-vertical": {
+    "description": "",
+    "scope": "",
+    "prefix": "f7-dialog-vertical",
+    "body": [
+      "app.dialog.create({",
+      "\ttitle: 'Title',",
+      "\ttext: 'Information',",
+      "\tbuttons: [{",
+      "\t\t\ttext: 'Option',",
+      "\t\t\tonClick: function() {",
+      "\t\t\t\tapp.dialog.alert('Option');",
+      "\t\t\t}",
+      "\t\t},",
+      "\t\t{",
+      "\t\t\ttext: 'Cancel',",
+      "\t\t\tonClick: function() {",
+      "\t\t\t\tapp.dialog.alert('Cancel');",
+      "\t\t\t}",
+      "\t\t},",
+      "\t\t{",
+      "\t\t\ttext: 'Yes',",
+      "\t\t\tonClick: function() {",
+      "\t\t\t\tapp.dialog.alert('Yes');",
+      "\t\t\t}",
+      "\t\t},",
+      "\t],",
+      "\tverticalButtons: true",
+      "}).open();"
+    ]
+  },
+  "f7-dialog-login": {
+    "description": "",
+    "scope": "",
+    "prefix": "f7-dialog-login",
+    "body": [
+      "app.dialog.login('Enter your username and password', function(username, password) {",
+      "\tapp.dialog.alert('Thank you!<br>Username:' + username + '<br>Password:' + password);",
+      "});"
+    ]
+  },
+  "f7-dialog-password": {
+    "description": "",
+    "scope": "",
+    "prefix": "f7-dialog-password",
+    "body": [
+      "app.dialog.password('Enter your username and password', function(password) {",
+      "\tapp.dialog.alert('Thank you!<br>Password:' + password);",
+      "});"
+    ]
+  },
+  "f7-dialog-preloader": {
+    "description": "",
+    "scope": "",
+    "prefix": "f7-dialog-preloader",
+    "body": [
+      "app.dialog.preloader('Title');",
+      "setTimeout(function() {",
+      "\tapp.dialog.close();",
+      "}, 3000);"
+    ]
+  },
+  "f7-dialog-progress": {
+    "description": "",
+    "scope": "",
+    "prefix": "f7-dialog-progress",
+    "body": [
+      "app.dialog.progress('Title');",
+      "setTimeout(function() {",
+      "\tapp.dialog.close();",
+      "}, 3000);"
+    ]
+  },
+  "f7-dialog-progress-percent": {
+    "description": "",
+    "scope": "",
+    "prefix": "f7-dialog-progress-percent",
+    "body": [
+      "var progress = 0;",
+      "var dialog = app.dialog.progress('Loading assets', progress);",
+      "dialog.setText('Image 1 of 10');",
+      "var interval = setInterval(function() {",
+      "\tprogress += 10;",
+      "\tdialog.setProgress(progress);",
+      "\tdialog.setText('Image ' + ((progress) / 10) + ' of 10');",
+      "\tif (progress === 100) {",
+      "\t\tclearInterval(interval);",
+      "\t\tdialog.close();",
+      "\t}",
+      "}, 300);"
+    ]
+  },
+  "f7-http-request-post": {
+    "description": "",
+    "scope": "",
+    "prefix": "f7-http-request-post",
+    "body": [
+      "function post() {",
+      "\tvar data_post = {",
+      "\t\tattribute_1: \"value_1\",",
+      "\t\tattribute_2: \"value_2\"",
+      "\t}",
+      "\tvar request = Framework7.request({",
+      "\t\tasync: false,",
+      "\t\tcrossDomain: true,",
+      "\t\tmethod: \"POST\",",
+      "\t\turl: \"https://myapi/post\",",
+      "\t\tdata: data_post,",
+      "\t\tsuccess: function(data) {",
+      "\t\t\treturn data;",
+      "\t\t}",
+      "\t});",
+      "\tvar response = JSON.parse(request.responseText);",
+      "\treturn response;",
+      "}",
+      "var return_post = post()"
+    ]
+  },
+  "f7-http-request-get": {
+    "description": "",
+    "scope": "",
+    "prefix": "f7-http-request-get",
+    "body": [
+      "function get(){",
+      "\tvar uri = \"select_id\"",
+      "\tvar request = Framework7.request({",
+      "\t\tasync: false,",
+      "\t\tcrossDomain: true,",
+      "\t\tmethod: \"GET\",",
+      "\t\turl: \"https://myapi/\", uri,",
+      "\t\tsuccess: function (data) {",
+      "\t\t\treturn data;",
+      "\t\t}",
+      "\t});",
+      "\tvar response = JSON.parse(request.responseText);",
+      "\treturn response;",
+      "}",
+      "var return_get = get();"
+    ]
+  },
+  "f7-http-request-delete": {
+    "description": "",
+    "scope": "",
+    "prefix": "f7-http-request-delete",
+    "body": [
+      "function remove() {",
+      "\tvar uri = \"remove\";",
+      "\tvar request = Framework7.request({",
+      "\t\tasync: false,",
+      "\t\tcrossDomain: true,",
+      "\t\tmethod: \"DELETE\",",
+      "\t\turl: \"https://myapi/\", uri,",
+      "\t\tsuccess: function(data) {",
+      "\t\t\treturn data;",
+      "\t\t}",
+      "\t});",
+      "\tvar response = JSON.parse(request.responseText);",
+      "\treturn response;",
+      "}",
+      "var return_remove = remove();"
+    ]
+  },
+  "f7-http-request-put": {
+    "description": "",
+    "scope": "",
+    "prefix": "f7-http-request-put",
+    "body": [
+      "function update() {",
+      "\tvar data_post = {",
+      "\t\tattribute_1: \"value_1\",",
+      "\t\tattribute_2: \"value_2\"",
+      "\t}",
+      "\tvar request = Framework7.request({",
+      "\t\tasync: false,",
+      "\t\tcrossDomain: true,",
+      "\t\tmethod: \"PUT\",",
+      "\t\turl: \"https://myapi/update\",",
+      "\t\tdata: data_post,",
+      "\t\tsuccess: function(data) {",
+      "\t\t\treturn data;",
+      "\t\t}",
+      "\t});",
+      "\tvar response = JSON.parse(request.responseText);",
+      "\treturn response;",
+      "}",
+      "var return_update = update();"
+    ]
+  }
+}

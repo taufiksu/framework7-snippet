@@ -1,0 +1,36 @@
+{
+    "name": "framework7",
+    "displayName": "Framework7",
+    "description": "Framework7 Code Snippets",
+    "version": "0.0.1",
+    "icon": "framework7.png",
+    "engines": {
+        "vscode": "^1.65.0"
+    },
+    "author": {
+        "name": "T Sulaeman P"
+    },
+    "categories": [
+        "Snippets"
+    ],
+    "keywords": [
+        "framework7",
+        "framework7 snippets"
+    ],
+    "contributes": {
+        "snippets": [
+            {
+                "language": "html",
+                "path": "./snippets/html.code-snippets"
+            },
+            {
+                "language": "javascript",
+                "path": "./snippets/js.code-snippets"
+            }
+        ]
+    },
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/taufiksu/framework7-snippet.git"
+    }
+}
