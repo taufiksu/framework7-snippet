@@ -7,6 +7,7 @@
     "engines": {
         "vscode": "^1.65.0"
     },
+    "publisher": "ETTER",
     "author": {
         "name": "T Sulaeman P"
     },
