@@ -8,9 +8,10 @@ Simple yet effective **Framework7 Snippet** for **Visual Studio Code** ([VSCode]
 
 Inspired from [Framework7](https://framework7.io/docs/) documentation. I thought it would be great if we have only [Framework7](https://framework7.io/) snippets,so created it.
 
-## Authors
+## Contributors
 
 - [Taufik Sulaeman P](https://github.com/taufiksu)
+- [Aksan Maulana](https://github.com/am-aksanmaulana)
 
 ## License
 
