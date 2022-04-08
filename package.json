@@ -2,7 +2,7 @@
     "name": "framework7",
     "displayName": "Framework7",
     "description": "Framework7 Code Snippets",
-    "version": "0.0.2",
+    "version": "0.0.3",
     "icon": "framework7.png",
     "engines": {
         "vscode": "^1.65.0"

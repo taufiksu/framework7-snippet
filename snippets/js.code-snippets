@@ -34,7 +34,7 @@
     "scope": "",
     "prefix": "f7-page-init",
     "body": [
-      "$$(document).on('page:init', '.page[data-name=\"${page_name}\"]', function(callback) {",
+      "$(document).on('page:init', '.page[data-name=\"${page_name}\"]', function(callback) {",
       "\tconsole.log(callback.detail.route.params);",
       "});"
     ]
@@ -44,7 +44,7 @@
     "scope": "",
     "prefix": "f7-page-reinit",
     "body": [
-      "$$(document).on('page:reinit', '.page[data-name=\"${page_name}\"]', function(callback) {",
+      "$(document).on('page:reinit', '.page[data-name=\"${page_name}\"]', function(callback) {",
       "\tconsole.log(callback.detail.route.params);",
       "});"
     ]
@@ -54,7 +54,7 @@
     "scope": "",
     "prefix": "f7-page-beforein",
     "body": [
-      "$$(document).on('page:beforein', '.page[data-name=\"${page_name}\"]', function(callback) {",
+      "$(document).on('page:beforein', '.page[data-name=\"${page_name}\"]', function(callback) {",
       "\tconsole.log(callback.detail.route.params);",
       "});"
     ]
@@ -64,7 +64,7 @@
     "scope": "",
     "prefix": "f7-page-afterin",
     "body": [
-      "$$(document).on('page:afterin', '.page[data-name=\"${page_name}\"]', function(callback) {",
+      "$(document).on('page:afterin', '.page[data-name=\"${page_name}\"]', function(callback) {",
       "\tconsole.log(callback.detail.route.params);",
       "});"
     ]
@@ -74,7 +74,7 @@
     "scope": "",
     "prefix": "f7-page-beforeout",
     "body": [
-      "$$(document).on('page:beforeout', '.page[data-name=\"${page_name}\"]', function(callback) {",
+      "$(document).on('page:beforeout', '.page[data-name=\"${page_name}\"]', function(callback) {",
       "\tconsole.log(callback.detail.route.params);",
       "});"
     ]
@@ -84,7 +84,7 @@
     "scope": "",
     "prefix": "f7-page-out",
     "body": [
-      "$$(document).on('page:afterout', '.page[data-name=\"your_page_name\"]', function(callback) {",
+      "$(document).on('page:afterout', '.page[data-name=\"your_page_name\"]', function(callback) {",
       "\tconsole.log(callback.detail.route.params);",
       "});"
     ]
@@ -94,7 +94,7 @@
     "scope": "",
     "prefix": "f7-page-afterin-preloader",
     "body": [
-      "$$(document).on('page:afterin', '.page[data-name=\"${page_name}\"]', function (callback) {",
+      "$(document).on('page:afterin', '.page[data-name=\"${page_name}\"]', function (callback) {",
       "\tconsole.log(callback.detail.route.params);",
       "\tapp.preloader.show();",
       "\tsetTimeout(function () {//Wait for 5 Sec",
@@ -108,7 +108,7 @@
     "scope": "",
     "prefix": "f7-page-afterin-progress",
     "body": [
-      "$$(document).on('page:afterin', '.page[data-name=\"${page_name}\"]', function (callback) {",
+      "$(document).on('page:afterin', '.page[data-name=\"${page_name}\"]', function (callback) {",
       "\tconsole.log(callback.detail.route.params);",
       "\tapp.progressbar.show();",
       "\tsetTimeout(function () {//Wait for 5 Sec",
@@ -122,7 +122,7 @@
     "scope": "",
     "prefix": "f7-page-afterin-progress-multi",
     "body": [
-      "$$(document).on('page:afterin', '.page[data-name=\"your_page_name\"]', function (callback) {",
+      "$(document).on('page:afterin', '.page[data-name=\"your_page_name\"]', function (callback) {",
       "\tconsole.log(callback.detail.route.params);",
       "\tapp.progressbar.show('multi');",
       "\tsetTimeout(function () {//Wait for 5 Sec",
@@ -136,7 +136,7 @@
     "scope": "",
     "prefix": "f7-page-afterin-dialog-preloader",
     "body": [
-      "$$(document).on('page:afterin', '.page[data-name=\"your_page_name\"]', function (callback) {",
+      "$(document).on('page:afterin', '.page[data-name=\"your_page_name\"]', function (callback) {",
       "\tconsole.log(callback.detail.route.params);",
       "\tapp.dialog.preloader('Loading');",
       "\tsetTimeout(function () {//Wait for 5 Sec",
@@ -150,7 +150,7 @@
     "scope": "",
     "prefix": "f7-page-afterin-dialog-progress",
     "body": [
-      "$$(document).on('page:afterin', '.page[data-name=\"your_page_name\"]', function (callback) {",
+      "$(document).on('page:afterin', '.page[data-name=\"your_page_name\"]', function (callback) {",
       "\tconsole.log(callback.detail.route.params);",
       "\tapp.dialog.progress('Loading');",
       "\tsetTimeout(function () {//Wait for 5 Sec",
@@ -164,7 +164,7 @@
     "scope": "",
     "prefix": "f7-action-click",
     "body": [
-      "$$(document).on('click', '#${id_or_class_name}', function () {",
+      "$(document).on('click', '#${id_or_class_name}', function () {",
       "\tapp.dialog.alert('click');",
       "});"
     ]
@@ -174,7 +174,7 @@
     "scope": "",
     "prefix": "f7-action-keyup",
     "body": [
-      "$$(document).on('keyup', '#${id_or_class_name}', function () {",
+      "$(document).on('keyup', '#${id_or_class_name}', function () {",
       "\tapp.dialog.alert('keyup');",
       "});"
     ]
@@ -184,7 +184,7 @@
     "scope": "",
     "prefix": "f7-action-keydown",
     "body": [
-      "$$(document).on('keydown', '#${id_or_class_name}', function () {",
+      "$(document).on('keydown', '#${id_or_class_name}', function () {",
       "\tapp.dialog.alert('keydown');",
       "});"
     ]
@@ -538,7 +538,7 @@
       "\t\tasync: false,",
       "\t\tcrossDomain: true,",
       "\t\tmethod: \"GET\",",
-      "\t\turl: \"https://myapi/\", uri,",
+      "\t\turl: uri,",
       "\t\tsuccess: function (data) {",
       "\t\t\treturn data;",
       "\t\t}",
@@ -560,7 +560,7 @@
       "\t\tasync: false,",
       "\t\tcrossDomain: true,",
       "\t\tmethod: \"DELETE\",",
-      "\t\turl: \"https://myapi/\", uri,",
+      "\t\turl: uri,",
       "\t\tsuccess: function(data) {",
       "\t\t\treturn data;",
       "\t\t}",
@@ -596,5 +596,54 @@
       "}",
       "var return_update = update();"
     ]
+  },
+  "f7-form-to-data": {
+    "description": "",
+    "scope": "",
+    "prefix": "f7-form-to-data",
+    "body": ["var formData = app.form.convertToData('#form-id');"]
+  },
+  "f7-form-fill-data": {
+    "description": "",
+    "scope": "",
+    "prefix": "f7-form-fill-data",
+    "body": [
+      "var formData = {",
+      "\t'name': 'John',",
+      "\t'email': 'john@doe.com',",
+      "\t'gender': 'female',",
+      "\t'toggle': ['yes'],",
+      "}",
+      "app.form.fillFromData('#my-form', formData);"
+    ]
+  },
+  "f7-tooltip": {
+    "description": "",
+    "scope": "",
+    "prefix": "f7-tooltip",
+    "body": [
+      "app.tooltip.create({",
+      "\ttargetEl: '.icon-tooltip',",
+      "\ttext: 'Tooltip text',",
+      "});"
+    ]
+  },
+  "f7-progressbar-show": {
+    "description": "",
+    "scope": "",
+    "prefix": "f7-progressbar-show",
+    "body": ["app.progressbar.show('#progressbar-id');"]
+  },
+  "f7-progressbar-set": {
+    "description": "",
+    "scope": "",
+    "prefix": "f7-progressbar-set",
+    "body": ["app.progressbar.set('#progressbar-id', value);"]
+  },
+  "f7-progressbar-hide": {
+    "description": "",
+    "scope": "",
+    "prefix": "f7-progressbar-hide",
+    "body": ["app.progressbar.hide('#progressbar-id');"]
   }
 }
